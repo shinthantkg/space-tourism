@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+body {
+  background-image: url("../images/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mobile {
+    background-image: url("../images/home/background-home-mobile.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../images/home/background-home-tablet.jpg");
+  }
+}

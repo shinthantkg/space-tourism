@@ -1,0 +1,146 @@
+@import "variables";
+@import "mixins";
+
+.header--desktop{
+  padding-top: 2%;
+  padding-left: 3%;
+}
+
+.navbar {
+  &__line {
+    background-color: hsla(0, 0%, 59%, 100%);
+    position: absolute;
+    transform: translateX(-90%) translateY(4.015625rem);
+    opacity: 0.3;
+    width: 30%;
+    height: 0.0625rem;
+    z-index: 1000;
+  }
+
+  &--desktop {
+    &__links {
+      background-color: hsla(0, 100%, 100%, 4%);
+      backdrop-filter: blur(0.625rem);
+      list-style: none;
+      top: 3%;
+      width: 51.875rem;
+      height: 6rem;
+    }
+
+    &__item {
+      margin-right: 3.125em;
+    }
+
+    &__link {
+      background: none;
+      border: none;
+      color: $color-header-text;
+      cursor: pointer;
+      font-family: $font-special-heading;
+      font-size: $fs-nav;
+      letter-spacing: $ls-nav;
+      text-transform: uppercase;
+
+      &--active::after,
+      &:hover::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.1875rem;
+        position: relative;
+        top: 2.25rem;
+      }
+
+      &--active::after {
+        background-color: hsl(0, 100%, 100%);
+      }
+
+      &:hover::after {
+        background-color: hsl(0, 0%, 59%);
+      }
+
+      &--index {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &--mobile {
+    background-color: hsla(0, 100%, 100%, 4%);
+    backdrop-filter: blur(0.625rem);
+    list-style: none;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    transition: left 350ms ease-in;
+    width: 68%;
+    height: 100%;
+
+    &[data-visible="true"] {
+      left: 32%;
+    }
+
+    &__btns {
+      padding: 9% 7%;
+      position: absolute;
+      width: 100vw;
+      right: 0;
+    }
+
+    &__hamburger-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    &__item {
+      margin-bottom: 1.875rem;
+    }
+
+    &__links {
+      position: absolute;
+      top: 15%;
+      list-style: none;
+    }
+
+    &__link {
+      background: none;
+      border: none;
+      color: $color-header-text;
+      cursor: pointer;
+      font-family: $font-special-heading;
+      font-size: $fs-nav;
+
+      &:not(:first-of-type) {
+        margin-top: 1.875rem;
+      }
+
+      letter-spacing: $ls-nav;
+      text-transform: uppercase;
+
+      &--active {
+        background-color: hsl(0, 100%, 100%);
+        width: 0.25rem;
+        height: 1.25rem;
+        margin-left: 0.625rem;
+      }
+
+      &--index {
+        font-weight: 700;
+        margin-right: 0.3125rem;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .navbar {
+    &__line {
+      display: none;
+    }
+
+    &__list {
+      width: 100%;
+    }
+  }
+}
