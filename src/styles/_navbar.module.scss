@@ -7,17 +7,17 @@
 }
 
 .navbar {
-  &__line {
-    background-color: hsla(0, 0%, 59%, 100%);
-    position: absolute;
-    transform: translateX(-90%) translateY(4.015625rem);
-    opacity: 0.3;
-    width: 30%;
-    height: 0.0625rem;
-    z-index: 1000;
-  }
-
   &--desktop {
+    &__line {
+      background-color: hsla(0, 0%, 59%, 100%);
+      position: absolute;
+      transform: translateX(-90%) translateY(4.015625rem);
+      opacity: 0.3;
+      width: 30%;
+      height: 0.0625rem;
+      z-index: 1000;
+    }
+
     &__links {
       background-color: hsla(0, 100%, 100%, 4%);
       backdrop-filter: blur(0.625rem);

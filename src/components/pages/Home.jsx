@@ -5,6 +5,19 @@ export default function Home() {
     return (
         <>
             <Navbar />
+            <main className={`${css["home"]} flex flex-jc-c`}>
+                <div className={`${css["intro"]}`}>
+                    <h1 className={`${css["intro__heading"]}`}>
+                        <span className={`${css["intro__heading--span"]}`}>So, you want to travel to</span>Space
+                    </h1>
+                    <p className={`${css["intro__body"]}`}>
+                        Let&apos;s face it; if you want to go to space, you might as well genuinely go to outer space
+                        and not hover kind of on the edge of it. Well site back, and relax because we&apos;ll give you a
+                        truly out of this world experience!
+                    </p>
+                </div>
+                <button className={`${css["home__explore-btn"]} flex flex-jc-c flex-ai-c`}>Explore</button>
+            </main>
         </>
     );
 }

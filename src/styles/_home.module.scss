@@ -14,3 +14,56 @@ body {
     background-image: url("../images/home/background-home-tablet.jpg");
   }
 }
+
+.home {
+  padding: 15% 0 5% 0;
+
+  &__explore-btn {
+    border-radius: 100%;
+    cursor: pointer;
+    font-family: $font-heading;
+    font-size: $fs-h4;
+    text-transform: uppercase;
+    transform: translate(3.125rem);
+    padding: 10rem;
+    height: 20rem;
+    width: 20rem;
+    transition: border 0.25s ease-in;
+
+    &:hover {
+      border: 3.125rem solid hsl(0, 0%, 59%);
+    }
+  }
+}
+
+.intro {
+  margin-right: 30%;
+  width: 30%;
+
+  &__heading {
+    color: $color-header-text;
+    font-family: $font-heading;
+    font-size: $fs-h1;
+    font-weight: $fw-reg;
+    text-transform: uppercase;
+    margin: 0;
+
+    &--span {
+      color: $color-body-text;
+      display: block;
+      font-family: $font-special-heading;
+      font-size: $fs-h5;
+      font-weight: $fw-reg;
+      letter-spacing: $ls-h5;
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &__body {
+    color: $color-body-text;
+    font-family: $font-body;
+    font-size: $fs-body;
+    line-height: 1.75;
+    margin-top: 3.125rem;
+  }
+}
