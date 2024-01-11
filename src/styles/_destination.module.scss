@@ -1,0 +1,106 @@
+@import "variables";
+@import "mixins";
+
+.destination {
+  padding: 5% 12% 5% 12%;
+
+  &__selection-label {
+    color: $color-header-text;
+    font-family: $font-special-heading;
+    font-size: $fs-sh1;
+    font-weight: $fw-reg;
+    letter-spacing: $ls-sh2;  
+    margin-bottom: 6.25rem;
+    text-transform: uppercase;
+
+    &--index {
+      color: hsl(222, 15%, 17%);
+      font-weight: $fw-bold;
+      margin-right: 0.9375rem;
+    }
+  }
+
+  &-info {
+    margin-top: 6.25rem;
+    margin-left: 10.9375rem;
+
+    &__name {
+      color: $color-header-text;
+      font-family: $font-heading;
+      font-size: $fs-h2;
+      font-weight: $fw-reg;
+      text-transform: uppercase;
+      margin-top: 2.5rem;
+      margin-bottom: 0;
+    }
+  
+    &__desc {
+      color: $color-body-text;
+      font-family: $font-body;
+      width: 75%;
+      line-height: 1.5;
+      margin-bottom: 4.0625rem;
+    }
+
+    &__divider {
+      opacity: 30%;
+      width: 28.125rem;
+      margin: 0 0 1.875rem 0;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    padding-inline-start: 0;
+
+    &__item {
+      color: $color-body-text;
+      cursor: pointer;
+      font-family: $font-special-heading;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: $ls-nav;
+
+      &:not(:last-of-type) {
+        margin-right: 2.1875rem;
+      }
+
+      &:hover::after,
+      &--active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.1875rem;
+        margin-top: 0.9375rem;
+      }
+
+      &:hover::after {
+        background-color: hsl(0, 0%, 59%);
+      }
+
+      &--active::after {
+        background-color: hsl(0, 100%, 100%);
+      }
+    }
+  }
+
+  &-travel-info {
+    column-gap: 5.3125rem;
+
+    &__name {
+      color: $color-body-text;
+      font-family: $font-special-heading;
+      font-size: 0.875rem;
+      font-weight: $fw-reg;
+      text-transform: uppercase;
+      letter-spacing: $ls-sh2;
+    }
+
+    &__data {
+      color: $color-header-text;
+      font-family: $font-heading;
+      font-size: $fs-sh1;
+      text-transform: uppercase;
+    }
+  }
+}
