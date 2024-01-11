@@ -1,5 +1,5 @@
 import {NavContextProvider, NavContextConsumer} from "./contexts/NavContext.jsx";
-import Navbar from "../Navbar.jsx";
+import Navbar from "./components/Navbar.jsx";
 import CurrentPage from "./components/pages/CurrentPage.jsx";
 
 export default function App() {
