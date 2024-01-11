@@ -38,6 +38,10 @@ a:visited {
     flex-direction: column-reverse;
   }
 
+  &-fd-rr {
+    flex-direction: row-reverse;
+  }
+
   &-jc-c {
     justify-content: center;
   }
@@ -106,6 +110,20 @@ a:visited {
         align-items: center;
       }
     }
+  }
+}
+
+.bg {
+  &-home {
+    background-image: url("../images/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &-destination {
+    background-image: url("../images/destination/background-destination-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 

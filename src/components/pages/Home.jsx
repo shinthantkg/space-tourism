@@ -1,9 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import NavContext from "../../contexts/NavContext.jsx";
 import css from "../../styles/_home.module.scss";
 
 export default function Home() {
     const { setCurrentPage } = useContext(NavContext);
+
+    useEffect(() => {
+        document.body.classList = "bg bg-home";
+    
+        return () => {
+          document.body.classList = "";
+        };
+      }, []);
 
     return (
         <main className={`${css["home"]} flex flex-fd-c-tm flex-jc-sb flex-ai-c-tm`}>
