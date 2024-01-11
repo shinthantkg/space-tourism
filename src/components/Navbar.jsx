@@ -19,7 +19,7 @@ export default function Navbar() {
         <>
             <header className={`${css["header--desktop"]} hidden-mobile`}>
                 <nav className={`${css["navbar--desktop"]} flex flex-jc-sb flex-ai-c`}>
-                    <img src={logo} alt="Shin's Space Tourism Logo"/>
+                    <img className={css["navbar__logo"]} src={logo} alt="Shin's Space Tourism Logo" onClick={() => setCurrentPage("00")} />
                     <div className={`hidden-mobile flex`}>
                         <div className={`${css["navbar--desktop__line"]}`}></div>
                         <ul className={`${css["navbar--desktop__links"]} flex flex-jc-c flex-ai-c`}>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 </nav>
 
                 <div className={` ${css["navbar--mobile__btns"]} flex flex-jc-sb flex-ai-c`}>
-                    <img src={logo} alt="Shin's Space Tourism Logo"/>
+                    <img className={css["navbar__logo"]} src={logo} alt="Shin's Space Tourism Logo" onClick={() => setCurrentPage("00")} />
                     <button className={`${css["navbar--mobile__hamburger-btn"]} visible-mobile`}
                             onClick={() => setMobileNavActive(prevState => !prevState)}>
                         <img src={!mobileNavActive ? hamburgerIcon : closeIcon} alt="Navigation Menu Icon"/>

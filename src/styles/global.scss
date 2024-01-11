@@ -69,20 +69,48 @@ a:visited {
 
 .visible {
   display: block;
-}
 
-.visible-mobile {
-  @include tablet {
-    display: none;
+  &-mobile {
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
   }
 
-  @include desktop {
-    display: none;
+  &-desktop {
+    @include tablet-mobile {
+      display: none;
+    }
   }
 }
 
-.hidden-mobile {
-  @include mobile {
+@include tablet-mobile {
+  .flex {
+    &-fd {
+      &-c-tm {
+        flex-direction: column;
+      }
+    }
+
+    &-jc {
+      &-c-tm {
+        justify-content: center;
+      }
+    }
+
+    &-ai {
+      &-c-tm {
+        align-items: center;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .hidden-mobile {
     display: none;
   }
 }
