@@ -49,6 +49,7 @@ export default function Destination() {
       <div>
         <h2 className={`${css["destination__selection-label"]}`}><span className={`${css["destination__selection-label--index"]}`}>01</span> Pick your destination</h2>
         <img src={images[currentDestination]} alt={currentData.alt} />
+        <img src={currentData.image} alt={currentData.alt} />
       </div>
     </main>
   );

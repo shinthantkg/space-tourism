@@ -7,7 +7,7 @@ export default function Home() {
 
     useEffect(() => {
         document.body.classList = "bg bg-home";
-    
+
         return () => {
           document.body.classList = "";
         };
@@ -21,8 +21,8 @@ export default function Home() {
                 </h1>
                 <p className={`${css["intro__body"]}`}>
                     Let&apos;s face it; if you want to go to space, you might as well genuinely go to outer space
-                    and not hover kind of on the edge of it. Well site back, and relax because we&apos;ll give you a
-                    truly out of this world experience!
+                    and not hover kind of on the edge of it. Well, sit back, and relax because we&apos;ll give you a
+                    truly out-of-this-world experience!
                 </p>
             </div>
             <div className={`${css["home__explore-btn-border"]} flex flex-jc-c`}>
