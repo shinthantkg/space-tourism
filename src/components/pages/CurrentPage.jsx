@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import CurrentPageContext from "../contexts/NavContext.jsx";
-import Home from "./pages/Home.jsx";
+import CurrentPageContext from "../../contexts/NavContext.jsx";
+import Home from "./Home.jsx";
 
 export default function CurrentPage() {
     const { currentPage } = useContext(CurrentPageContext);
