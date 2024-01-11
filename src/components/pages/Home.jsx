@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import NavContext from "../../contexts/NavContext.jsx";
 import Navbar from "../Navbar.jsx";
 import css from "../../styles/_home.module.scss";
 
 export default function Home() {
+    const {setCurrentPage} = useContext(NavContext);
+
     return (
         <>
             <Navbar />
@@ -17,7 +21,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className={`${css["home__explore-btn-border"]} flex flex-jc-c`}>
-                    <button className={`${css["home__explore-btn"]} flex flex-jc-c flex-ai-c`}>Explore</button>
+                    <button className={`${css["home__explore-btn"]} flex flex-jc-c flex-ai-c`} onClick={() => setCurrentPage("01")}>Explore</button>
                 </div>
             </main>
         </>
