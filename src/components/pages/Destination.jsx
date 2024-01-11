@@ -5,7 +5,6 @@ import moon from "../../images/destination/image-moon.webp";
 import mars from "../../images/destination/image-mars.webp";
 import europa from "../../images/destination/image-europa.webp";
 import titan from "../../images/destination/image-titan.webp";
-=======
 
 export default function Destination() {
   const destinationsData = data.destinations;
