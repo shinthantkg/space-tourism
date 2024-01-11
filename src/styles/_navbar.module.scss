@@ -7,6 +7,10 @@
 }
 
 .navbar {
+  &__logo {
+    cursor: pointer;
+  }
+
   &--desktop {
     &__line {
       background-color: hsla(0, 0%, 59%, 100%);
