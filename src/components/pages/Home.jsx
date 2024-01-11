@@ -9,9 +9,9 @@ export default function Home() {
         document.body.classList = "bg bg-home";
 
         return () => {
-            document.body.classList = "";
+          document.body.classList = "";
         };
-    }, []);
+      }, []);
 
     return (
         <main className={`${css["home"]} flex flex-fd-c-tm flex-jc-sb flex-ai-c-tm`}>
