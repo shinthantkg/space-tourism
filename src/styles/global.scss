@@ -62,6 +62,10 @@ a:visited {
   &-ai-c {
     align-items: center;
   }
+
+  &-rg-20 {
+    row-gap: 1.25rem;
+  }
 }
 
 .hidden {
@@ -113,6 +117,20 @@ a:visited {
     &-ai {
       &-c-tm {
         align-items: center;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .flex-m {
+    display: flex;
+  }
+
+  .flex {
+    &-fd {
+      &-c-m {
+        flex-direction: column;
       }
     }
   }

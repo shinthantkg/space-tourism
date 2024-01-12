@@ -35,12 +35,12 @@ export default function Destination() {
         <h1 className={`${css["destination-info__name"]}`}>{currentData.name}</h1>
         <p className={`${css["destination-info__desc"]}`}>{currentData.description}</p>
         <hr className={`${css["destination-info__divider"]}`} />
-        <div className={`${css["destination-travel-info"]} flex`}>
-          <div>
+        <div className={`${css["destination-travel-info"]} flex flex-fd-c-m flex-rg-20`}>
+          <div className={`flex-m flex-fd-c flex-ai-c`}>
             <h3 className={`${css["destination-travel-info__name"]}`}>Avg. distance</h3>
             <span className={`${css["destination-travel-info__data"]}`}>{currentData.distance}</span>
           </div>
-          <div>
+          <div className={`flex-m flex-fd-c flex-ai-c`}>
             <h3 className={`${css["destination-travel-info__name"]}`}>Est. travel time</h3>
             <span className={`${css["destination-travel-info__data"]}`}>{currentData.travel}</span>
           </div>

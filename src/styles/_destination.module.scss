@@ -107,8 +107,15 @@
 
 @include tablet-mobile {
   .destination {
-    &__image {
-      margin-top: 12.5rem;
+    &__selection-label {
+      font-size: $fs-nav;
+      margin-top: 6.25rem;
+      margin-bottom: 2.1875rem;
+      text-align: center;
+
+      &--index {
+        margin-right: 0.3125rem;
+      }
     }
 
     &-info {
@@ -126,7 +133,38 @@
     &__selection-label {
       position: absolute;
       left: 5%;
-      margin-top: 50px;
+      margin-top: 3.125rem;
+    }
+
+    &__image {
+      margin-top: 12.5rem;
+    }
+  }
+}
+
+@include mobile {
+  .destination {
+    &__image {
+      max-width: 100%;
+    }
+
+    &-info {
+      margin-top: 2.1875rem;
+
+      &__name {
+        font-size: $fs-h3;
+        margin-top: 1.25rem;
+      }
+
+      &__desc {
+        font-size: 0.9375rem;
+        width: 110%;
+        margin-bottom: 2.1875rem;
+      }
+
+      &__divider {
+        width: 100%;
+      }
     }
   }
 }
