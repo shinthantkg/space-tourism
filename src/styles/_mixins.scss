@@ -1,11 +1,11 @@
 @mixin mobile {
-  @media only screen and (max-width: 62.4375rem) {
+  @media only screen and (max-width: 47.9688rem) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media only screen and (min-width: 62.5rem) and (max-width: 79.9375rem) {
+  @media only screen and (min-width: 48rem) and (max-width: 79.9375rem) {
     @content;
   }
 }
