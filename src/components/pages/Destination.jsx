@@ -25,8 +25,8 @@ export default function Destination() {
   }, []);
 
   return (
-    <main className={`${css["destination"]} flex flex-fd-rr flex-jc-c`}>
-      <div className={`${css["destination-info"]}`}>
+    <main className={`${css["destination"]} flex flex-fd-rr flex-fd-cr-tm flex-ai-c-tm flex-jc-c`}>
+      <div className={`${css["destination-info"]} flex-tm flex-fd-c-tm flex-ai-c-tm`}>
         <ul className={`${css["destination-list"]} flex`}>
           {destinationsData.map(destination => {
             return <li key={destination.id} className={`${css["destination-list__item"]} ${currentDestination === destination.id ? css["destination-list__item--active"] : ""}`} onClick={() => setCurrentDestination(destination.id)}>{destination.name}</li>
@@ -35,12 +35,12 @@ export default function Destination() {
         <h1 className={`${css["destination-info__name"]}`}>{currentData.name}</h1>
         <p className={`${css["destination-info__desc"]}`}>{currentData.description}</p>
         <hr className={`${css["destination-info__divider"]}`} />
-        <div className={`${css["destination-travel-info"]} flex`}>
-          <div>
+        <div className={`${css["destination-travel-info"]} flex flex-fd-c-m flex-rg-20`}>
+          <div className={`flex-m flex-fd-c flex-ai-c`}>
             <h3 className={`${css["destination-travel-info__name"]}`}>Avg. distance</h3>
             <span className={`${css["destination-travel-info__data"]}`}>{currentData.distance}</span>
           </div>
-          <div>
+          <div className={`flex-m flex-fd-c flex-ai-c`}>
             <h3 className={`${css["destination-travel-info__name"]}`}>Est. travel time</h3>
             <span className={`${css["destination-travel-info__data"]}`}>{currentData.travel}</span>
           </div>
@@ -48,8 +48,7 @@ export default function Destination() {
       </div>
       <div>
         <h2 className={`${css["destination__selection-label"]}`}><span className={`${css["destination__selection-label--index"]}`}>01</span> Pick your destination</h2>
-        <img src={images[currentDestination]} alt={currentData.alt} />
-        <img src={currentData.image} alt={currentData.alt} />
+        <img className={`${css["destination__image"]}`} src={images[currentDestination]} alt={currentData.alt} />
       </div>
     </main>
   );
