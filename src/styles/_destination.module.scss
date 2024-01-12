@@ -104,3 +104,29 @@
     }
   }
 }
+
+@include tablet-mobile {
+  .destination {
+    &__image {
+      margin-top: 12.5rem;
+    }
+
+    &-info {
+      margin-left: 0;
+
+      &__desc {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .destination {
+    &__selection-label {
+      position: absolute;
+      left: 5%;
+      margin-top: 50px;
+    }
+  }
+}

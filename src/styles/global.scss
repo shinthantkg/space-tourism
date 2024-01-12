@@ -89,10 +89,18 @@ a:visited {
 }
 
 @include tablet-mobile {
+  .flex-tm {
+    display: flex;
+  }
+
   .flex {
     &-fd {
       &-c-tm {
         flex-direction: column;
+      }
+      
+      &-cr-tm {
+        flex-direction: column-reverse;
       }
     }
 
