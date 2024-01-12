@@ -1,5 +1,5 @@
 @mixin mobile {
-  @media only screen and (max-width: 47.9375rem) {
+  @media only screen and (max-width: 47.9688rem) {
     @content;
   }
 }
