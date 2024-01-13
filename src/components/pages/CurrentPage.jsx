@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import CurrentPageContext from "../../contexts/NavContext.jsx";
+import NavContext from "../../contexts/NavContext.jsx";
 import Navbar from "../Navbar.jsx";
 import Home from "./Home.jsx";
 import Destination from "./Destination.jsx";
 
 export default function CurrentPage() {
-    const { currentPage } = useContext(CurrentPageContext);
+    const { currentPage } = useContext(NavContext);
 
     function getPageComponent() {
         switch (currentPage) {
