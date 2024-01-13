@@ -18,7 +18,7 @@ export default function CurrentPage() {
             default:
                 return <Home />;
         }
-    };
+    }
 
     return (
         <>
