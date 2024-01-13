@@ -48,7 +48,7 @@ export default function Destination() {
       </div>
       <div>
         <h2 className={`${css["destination__selection-label"]}`}><span className={`${css["destination__selection-label--index"]}`}>01</span> Pick your destination</h2>
-        <img className={`${css["destination__image"]}`} src={images[currentDestination]} alt={currentData.alt} />
+        <img className={`${css["destination__image"]}`} src={images[currentDestination]} alt={currentData.alt} loading={`lazy`} />
       </div>
     </main>
   );
